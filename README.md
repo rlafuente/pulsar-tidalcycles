@@ -146,11 +146,20 @@ The `BootTidal.hs` file is loaded correctly, but tidal is not installed or did n
 This could mean that the BootTidal.hs file you are using has a value not supported by the version of tidal you have installed. You can find the variable in the error message in your BootTidal.hs and comment out that line (using double hyphens).
 
 ## Contributing
+To be able to work and test this package in development mode, do the following:
+
+- create a fork on GitHub so you can make any changes you want
+- clone it with `git clone https://github.com/tidalcycles/pulsar-tidalcycles.git`
+- install all its dependencies with `cd pulsar-tidalcycles; pulsar -p install`
+- link it so Pulsar knows where to load it from: `pulsar -p link -d`
+
+Now, running `pulsar --dev` will load your development version of the packages; you can keep using the original package version by running Pulsar normally (without `--dev`).
+
+## Contribution guidelines
 
 If you'd like to contribute to this package, here are some guidelines:
 
 ### JavaScript Formatting
-
 A `.jsbeautifyfc` file is used to define JavaScript formatting settings. Please use
 a beautifier package (we recommend `atom-beautify`) to format your changes with
 these settings.
